@@ -8,10 +8,19 @@ $(document).ready(function() {
     // console.log(this)
         var changeColor = function(data) {
             var column = $(this).find('input[value]')[1].value;
-            var row_count = $("#row").val();
+            var row_count = $(this).children()[2].value;
           $('#'+ row_count + ' td:nth-child('+ column + ')').css('background-color', turns())
-          increaseRow()
-        }
+
+            var row = $(this).children()[2].value;
+            row-= 1;
+            $(this).children()[2].value = row;
+
+            if (row === 6){
+              var button = $('column').val(hidden);
+
+            }
+          };
+
 
         var turns = function(){
           var count = $('#turn_counter').val();
@@ -29,18 +38,14 @@ $(document).ready(function() {
             var row = $('#row').val();
             row--;
             $('#row').val(row);
+            debugger
             if (row === 6){
               var button = $('column').val(hidden);
+
             }
           };
 
 
-    //   console.log($('#turn_counter').val())
-    // // console.log(turn_counter);
-    var column = $(that).find('input[value]')[1].value
-    var row_count = $("#row").val();
-    var row_integer = parseInt(row_count)
-    // console.log(column)
     $.ajax({
       url:'/',
       type: 'POST',
