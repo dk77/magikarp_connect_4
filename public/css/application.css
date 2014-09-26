@@ -10,6 +10,15 @@ th {
   text-align: left;
 }
 
+form {
+  margin: 22px;
+  width: 65px;
+}
+
+.button {
+  margin: 13px;
+}
+
 .block td{
   display: inline-block;
   width: 100px;
