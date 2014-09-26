@@ -8,15 +8,19 @@ $(document).ready(function() {
         var changeColor = function(data) {
             var column = $(this).find('input[value]')[1].value;
             var row_count = $(this).children()[2].value;
+            cell = $('#'+ row_count + ' td:nth-child('+ column + ')')
+            cell.css('background-image', turns());
+            if (cell === cell.next() && cell.prev())
 
-          $('#'+ row_count + ' td:nth-child('+ column + ')').css('background-color', turns());
-            var count = $('#turn_counter').val();
-            if (count % 2 === 0){
-              $('#'+ row_count + ' td:nth-child('+ column + ')').attr("id", "player1")
+            if ($('#turn_counter').val() % 2 === 0){
+              cell.attr("id", "player1")
             } else {
-              $('#'+ row_count + ' td:nth-child('+ column + ')').attr("id", "player2")
+              cell.attr("id", "player2")
             };
 
+            if (cell.attr("id") === cell.next().attr("id") && cell.next().next().attr("id") && cell.next().next().next().attr("id")){
+              alert("Game Over")
+            };
 
             var row = $(this).children()[2].value;
             row-= 1;
@@ -28,6 +32,8 @@ $(document).ready(function() {
 
             }
           };
+
+
 
         var turns = function(){
           var count = $('#turn_counter').val();
