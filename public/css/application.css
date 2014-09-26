@@ -10,6 +10,10 @@ th {
   text-align: left;
 }
 
+td {
+  background-color: white;
+}
+
 form {
   margin: 22px;
   width: 65px;
@@ -31,7 +35,9 @@ form {
 
 table {
   border: solid black 2px;
-  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: yellow;
 }
 
 #red {
