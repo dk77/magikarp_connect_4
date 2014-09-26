@@ -13,10 +13,8 @@ $(document).ready(function() {
             var count = $('#turn_counter').val();
             if (count % 2 === 0){
               $('#'+ row_count + ' td:nth-child('+ column + ')').attr("id", "player1")
-              debugger
             } else {
               $('#'+ row_count + ' td:nth-child('+ column + ')').attr("id", "player2")
-              debugger
             };
 
 
