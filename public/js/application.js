@@ -9,7 +9,7 @@ $(document).ready(function() {
             var column = $(this).find('input[value]')[1].value;
             var row_count = $(this).children()[2].value;
 
-          $('#'+ row_count + ' td:nth-child('+ column + ')').css('background-color', turns());
+          $('#'+ row_count + ' td:nth-child('+ column + ')').css('background-image', turns());
             var count = $('#turn_counter').val();
             if (count % 2 === 0){
               $('#'+ row_count + ' td:nth-child('+ column + ')').attr("id", "player1")
