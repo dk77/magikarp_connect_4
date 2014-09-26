@@ -10,6 +10,13 @@ th {
   text-align: left;
 }
 
+img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: auto;
+}
+
 td {
   background-color: white;
 }
@@ -17,10 +24,6 @@ td {
 form {
   margin: 22px;
   width: 65px;
-}
-
-.button {
-  margin: 13px;
 }
 
 .block td{
@@ -31,6 +34,8 @@ form {
   border: solid black 2px;
   margin: 2px;
   border-radius: 50%;
+/*  margin-left: auto;
+  margin-right: auto*/
 }
 
 table {
@@ -40,10 +45,17 @@ table {
   background-color: yellow;
 }
 
-#red {
-  background-color: red;
+/*#red {
+  background-image: url('http://i.imgur.com/QRznfHy.jpg');
+
 }
 
 #black {
   background-color: black;
-}
+}*/
+
+/*.right_block {
+  height: 100%;
+  width: 50px;
+  background-color: blue;
+}*/
