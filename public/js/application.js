@@ -15,8 +15,10 @@ $(document).ready(function() {
             row-= 1;
             $(this).children()[2].value = row;
 
-            if (row === 6){
-              var button = $('column').val(hidden);
+            if (row === 0){
+              // $(this).children()[0].type = disabled;
+              console.log(this)
+              var button = $(this).children()[0].type = "hidden";
 
             }
           };
@@ -34,16 +36,7 @@ $(document).ready(function() {
                 return 'black'
               };
         };
-        var increaseRow = function(){
-            var row = $('#row').val();
-            row--;
-            $('#row').val(row);
-            debugger
-            if (row === 6){
-              var button = $('column').val(hidden);
 
-            }
-          };
 
 
     $.ajax({
